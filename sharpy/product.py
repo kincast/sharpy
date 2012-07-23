@@ -209,7 +209,7 @@ class CheddarProduct(object):
         if bill_date:
             data['subscription[changeBillDate]'] = self.client.format_datetime(bill_date)
         if apple_receipt:
-            data['appleReceipt'] = apple_receipt
+            data['subscription[appleReceipt]'] = apple_receipt
 
         return data
 
