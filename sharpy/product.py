@@ -439,7 +439,7 @@ class Customer(object):
                 cc_last_name=None, cc_company=None, cc_email=None,\
                 cc_country=None, cc_address=None, cc_city=None, \
                 cc_state=None, cc_zip=None, plan_code=None, bill_date=None,
-                return_url=None, cancel_url=None,):
+                return_url=None, cancel_url=None,apple_receipt=None):
 
         data = self.product.build_customer_post_data( first_name=first_name,
                         last_name=last_name, email=email, plan_code=plan_code,
@@ -458,7 +458,7 @@ class Customer(object):
                         cc_email=cc_email, cc_country=cc_country,
                         cc_address=cc_address, cc_city=cc_city,
                         cc_state=cc_state, cc_zip=cc_zip, bill_date=bill_date,
-                        return_url=return_url, cancel_url=cancel_url,)
+                        return_url=return_url, cancel_url=cancel_url, apple_receipt=apple_receipt)
 
         path = 'customers/edit'
         params = {'code': self.code}
